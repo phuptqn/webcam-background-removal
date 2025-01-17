@@ -22,7 +22,7 @@ let fps = 0;
 
 async function loadModel() {
   await tf.setBackend('webgl');
-  model = await tflite.loadTFLiteModel('/pretrained/segvid_mnv2_port256_portrait_video.tflite');
+  model = await tflite.loadTFLiteModel(`${BASE_URL}pretrained/segvid_mnv2_port256_portrait_video.tflite`);
 
   console.log('Model loaded');
 }
@@ -151,7 +151,7 @@ async function main() {
 
   background = document.createElement('img');
   background.crossOrigin = 'anonymous';
-  background.src = '/image/bg/bg1.jpg';
+  background.src = `${BASE_URL}image/bg/bg1.jpg`;
 
   fpsEle = document.getElementById('fps');
 
