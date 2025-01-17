@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webcam Background Removal</title>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <h1>Webcam Background Removal</h1>
+  <div id="model-info">model type: tflite, backend: webgl</div>
+  <div id="output-area">
+    <video id="webcam" autoplay playsinline muted width="640" height="480"></video>
+    <canvas id="outputCanvas"></canvas>
+    <span id="fps">0</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite/dist/tf-tflite.min.js"></script>
+
+  <script src="js/tflite.js"></script>
+</body>
+</html>
